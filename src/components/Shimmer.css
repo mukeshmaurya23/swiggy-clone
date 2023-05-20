@@ -1,0 +1,13 @@
+.shimmer-card {
+  width: 320px;
+  height: 320px;
+  background: lightgrey;
+  margin: 20px;
+}
+.shimmer-img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  height: 150px;
+  background: rgb(117, 115, 115);
+}

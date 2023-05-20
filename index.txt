@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1 id="title">Namaste React Dev 2</h1>
+      This is not rendered
+    </div>
+
+    <!-- <script>
+      const heading = document.createElement("h1");
+
+      heading.innerHTML = "Namaste React Dev";
+
+      const root = document.getElementById("root");
+      root.appendChild(heading);
+    </script> -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      const heading = React.createElement(
+        "h1",
+        {
+          id: "title",
+          className: "mukesh",
+
+          style: {
+            color: "red",
+            backgroundColor: "black",
+          },
+
+          onClick: () => {
+            console.log("clicked");
+          },
+
+          onMouseOver: () => {
+            console.log("mouse over");
+          },
+        },
+        "Namaste React Dev 3"
+      );
+      const heading2 = React.createElement("h1", null, "Namaste React Dev 4");
+
+      const div = React.createElement("div", null, [heading, heading2]);
+      console.log(heading);
+
+      const ul = React.createElement("ul", null, [
+        React.createElement("li", null, "mukesh"),
+        React.createElement("li", null, "mukesh"),
+        React.createElement("li", null, "mukesh"),
+      ]);
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render([heading, heading2, ul]);
+    </script>
+  </body>
+</html>
